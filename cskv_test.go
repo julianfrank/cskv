@@ -16,14 +16,14 @@ func TestNew(t *testing.T) {
 	}{
 		{"empty string", args{kv: ""}, KV{kv: map[string]string{}}},
 		{"bad single value string", args{kv: "key"}, KV{kv: map[string]string{}}},
-		{"key but no value", args{kv: "key:"}, KV{kv: map[string]string{"key": ""}}},
-		{"value but no key", args{kv: ":value"}, KV{kv: map[string]string{"": "value"}}},
-		{"key:value", args{kv: "key:value"}, KV{kv: map[string]string{"key": "value"}}},
+		{"key but no value", args{kv: "key:"}, KV{kv: map[string]string{"key": ""},Str:"key:"}},
+		{"value but no key", args{kv: ":value"}, KV{kv: map[string]string{"": "value"},Str:":value"}},
+		{"key:value", args{kv: "key:value"}, KV{kv: map[string]string{"key": "value"},Str:"key:value"}},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := New(tt.args.kv); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("New() = %v, want %v", got, tt.want)
+				t.Errorf("New() = %+v, want %+v", got, tt.want)
 			}
 		})
 	}
