@@ -45,28 +45,5 @@ mystr := cskv.Use(mymap).Str
 // Output : "one:onevalue,two:twovalue"
 ```
 
-### Error
-In your Application use the familiar cskv.Error ...Just remember that the E is capital
-```go
-comment:="Awsome!"
-dude:="Julian Frank"
-myError:=cskv.Error("This comment (%s) was made by %s")
-//Output myError=> "This comment (Awsome!) was made by Julian Frank" 
-//of type error
-//Use err.Error() to retreive error string 
-```
-
-### cskv Display Flags 
-If You want to selectively enable or disable cskv display of Log or Error you can simply do that by setting cskv.LogMode and cskv.ErrorMode to true or false. True is default
-```go
-//To make screen completely quiet
-cskv.LogMode=false
-cskv.ErrorMode=false
-
-//To Display only errors and not the Logs
-cskv.LogMode=false
-cskv.ErrorMode=true
-```
-
 ## License
 MIT
