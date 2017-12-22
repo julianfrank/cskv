@@ -16,9 +16,9 @@ func TestNew(t *testing.T) {
 	}{
 		{"empty string", args{kv: ""}, KV{kv: map[string]string{}}},
 		{"bad single value string", args{kv: "key"}, KV{kv: map[string]string{}}},
-		{"key but no value", args{kv: "key:"}, KV{kv: map[string]string{"key": ""},Str:"key:"}},
-		{"value but no key", args{kv: ":value"}, KV{kv: map[string]string{"": "value"},Str:":value"}},
-		{"key:value", args{kv: "key:value"}, KV{kv: map[string]string{"key": "value"},Str:"key:value"}},
+		{"key but no value", args{kv: "key:"}, KV{kv: map[string]string{"key": ""}, Str: "key:"}},
+		{"value but no key", args{kv: ":value"}, KV{kv: map[string]string{"": "value"}, Str: ":value"}},
+		{"key:value", args{kv: "key:value"}, KV{kv: map[string]string{"key": "value"}, Str: "key:value"}},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
@@ -73,9 +73,9 @@ func TestUse(t *testing.T) {
 		want KV
 	}{
 		{"empty map", args{kvmap: make(map[string]string)}, KV{kv: make(map[string]string)}},
-		{"key no value", args{kvmap: knv}, KV{kv: knv,Str:"key:"}},
-		{"value no key", args{kvmap: vnk}, KV{kv: vnk,Str:":value"}},
-		{"key:value", args{kvmap: kv}, KV{kv: kv,Str:"key:value"}},
+		{"key no value", args{kvmap: knv}, KV{kv: knv, Str: "key:"}},
+		{"value no key", args{kvmap: vnk}, KV{kv: vnk, Str: ":value"}},
+		{"key:value", args{kvmap: kv}, KV{kv: kv, Str: "key:value"}},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
