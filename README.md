@@ -46,5 +46,9 @@ mystr := cskv.Use(mymap).Str
 // Output : "one:onevalue,two:twovalue"
 ```
 
+### To Be Done
+- [] Get/Set per key on KV Object
+- [] JSON Export
+
 ## License
 MIT
