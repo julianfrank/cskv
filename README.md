@@ -47,8 +47,8 @@ mystr := cskv.Use(mymap).Str
 ```
 
 ### To Be Done
-- [] Get/Set per key on KV Object
-- [] JSON Export
+- [ ] Get/Set per key on KV Object
+- [ ] JSON Export
 
 ## License
 MIT
