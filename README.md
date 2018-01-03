@@ -1,6 +1,7 @@
 [![GoDoc](https://godoc.org/github.com/julianfrank/cskv?status.svg)](https://godoc.org/github.com/julianfrank/cskv)
  [![Coverage Status](https://coveralls.io/repos/github/julianfrank/cskv/badge.svg?branch=master)](https://coveralls.io/github/julianfrank/cskv?branch=master) [![Build Status](https://travis-ci.org/julianfrank/cskv.svg?branch=master)](https://travis-ci.org/julianfrank/cskv)
  [![Go Report Card](https://goreportcard.com/badge/github.com/julianfrank/cskv)](https://goreportcard.com/report/github.com/julianfrank/cskv)
+[![Gitter](https://img.shields.io/badge/gitter-join-brightgreen.svg)](https://gitter.im/jfopensource/cskv)
 
 # Comma Separate Key Value 
 package for Quick Key-Value Array Sharing and usage in Text based messages
